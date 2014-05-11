@@ -1,0 +1,71 @@
+
+snippet fi
+:montage-style
+
+  
+
+:montage-script
+
+  Component = require("montage/ui/component").Component
+
+  exports.${1/\w+\s*/\u$0/g} = Component.specialize
+    templateDidLoad:
+      value: (e) ->
+        console.log "Loaded."
+
+:montage-html
+
+html
+  head
+    link(rel="stylesheet" type="text/css" href="$1.css")
+    :bindings
+      owner:
+        properties:
+          element: "#": "${1:`!v expand("%:t:r")`}"
+
+  
+	body
+    .$1(mid="$1")
+			h1 
+
+endsnippet
+
+# Component definition functions
+
+snippet mi
+$1:
+	prototype: "${2:montage/ui/text.reel}"
+	properties:
+		element: "#": "$1"
+	bindings:
+		$0
+endsnippet
+
+snippet bi
+${1:value}: "<-$2": "$0"
+endsnippet
+
+snippet li
+listeners: [
+	type: "${1:action}", listener: "@": "${2:owner}"
+]
+endsnippet
+
+# CoffeeScript functions
+
+snippet fn
+$1:
+	value: ($2) ->
+		$0
+endsnippet
+
+snippet var
+$1:
+	value: $0
+endsnippet
+
+# Jade functions
+
+snippet ji
+$1(mid="$0")
+endsnippet
