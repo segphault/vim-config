@@ -15,6 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'EasyMotion'
+Plugin 'Syntastic'
 Plugin 'ctrlp.vim'
 Plugin 'rosenfeld/conque-term'
 Plugin 'surround.vim'
@@ -22,7 +23,6 @@ Plugin 'matchit.zip'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'MultipleSearch2.vim'
-Plugin 'Syntastic'
 Plugin 'justinmk/vim-sneak'
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
@@ -53,6 +53,14 @@ let g:airline_right_sep = ''
 
 " Add my snippets folder to UltiSnips
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
+
+" Shortcut for toggling syntastic
+" Credit: http://stackoverflow.com/a/21434697
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+" Hide annoying stuff from the Ctrl+P listing
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 "
 " Custom Settings
@@ -184,3 +192,7 @@ function! SetupBufferExec()
 endfunction
 
 autocmd FileType python,ruby,coffee call SetupBufferExec()
+
+" Abbreviations
+
+abbrev slava Slava Akhmechet
