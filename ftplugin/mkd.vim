@@ -46,7 +46,7 @@ set rulerformat=%20(%l,%c%V\ [%{WordCount()}]\ %=%P%)
 
 if has('gui_macvim')
   " Open current file in Marked
-  command! Marked :!open -a /Applications/Marked.app "%"
+  command! Marked :!open -a /Applications/Marked\ 2.app "%"
   imap <D-e> <esc>:Marked<cr><cr>
   map <D-e> :Marked<cr><cr>
 

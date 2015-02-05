@@ -27,8 +27,11 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
 
 " File types
+Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-haml'
 Plugin 'othree/html5.vim'
 Plugin 'vim-coffee-script'
