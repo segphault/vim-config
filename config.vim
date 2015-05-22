@@ -31,6 +31,7 @@ Plugin 'rainbow_parentheses.vim'
 Plugin 'tpope/vim-fireplace'
 
 " File types
+Plugin 'elixir-lang/vim-elixir'
 Plugin 'fatih/vim-go'
 Plugin 'tpope/vim-haml'
 Plugin 'othree/html5.vim'
