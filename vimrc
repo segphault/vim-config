@@ -6,8 +6,8 @@
 set nocompatible
 filetype off
 
-set runtimepath+=~/Dropbox/Settings/Vim/bundle/Vundle.vim
-call vundle#begin('~/Dropbox/Settings/Vim/bundle')
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle')
 
 Plugin 'gmarik/Vundle.vim'
 
@@ -196,7 +196,3 @@ function! SetupBufferExec()
 endfunction
 
 autocmd FileType python,ruby,coffee call SetupBufferExec()
-
-" Abbreviations
-
-abbrev slava Slava Akhmechet
