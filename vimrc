@@ -24,7 +24,6 @@ Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'MultipleSearch2.vim'
 Plugin 'justinmk/vim-sneak'
-Plugin 'bling/vim-airline'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'rainbow_parentheses.vim'
@@ -49,11 +48,6 @@ filetype plugin indent on
 "
 " Plugin Settings
 "
-
-" Enable airline's special tab bar
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
 
 " Add my snippets folder to UltiSnips
 let g:UltiSnipsSnippetDirectories=['UltiSnips', 'snips']
@@ -173,7 +167,7 @@ endif
 
 if has('gui_running')
   " Hide user interface crap in MacVim or GVim
-  set guioptions=e
+  set guioptions=re
 
   " Apply the font settings for the platform
   let &guifont=g:fontname . g:fontsize
